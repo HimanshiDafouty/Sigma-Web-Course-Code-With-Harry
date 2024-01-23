@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .child
+        {
+            background-color: aliceblue;
+            padding:30px;
+            border:2px solid black;
+            margin:30px;
+            cursor:pointer;
+        }
+        .childContainer
+        {
+            background-color: beige;
+            padding:30px;
+            border:2px solid black;
+            margin:30px;
+            cursor:pointer;
+        }
+        .container
+        {
+            background-color: aqua;
+            padding:30px;
+            border:2px solid black;
+            margin:30px;
+            cursor:pointer;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="childContainer">
+            <div class="child">
+                Iam a child 
+            </div>
+        
+        </div>
+    </div>
+
+    <script>
+        document.querySelector(".child").addEventListener("click" , (e)=>
+        {
+            e.stopPropagation()
+            document.querySelector(".child").innerHTML="child clicked";
+        })
+        document.querySelector(".childContainer").addEventListener("click" , (e)=>
+        {
+            e.stopPropagation()
+            document.querySelector(".childContainer").innerHTML="childContainer clicked";
+        })
+        document.querySelector(".container").addEventListener("click" , (e)=>
+        {
+            e.stopPropagation()
+            document.querySelector(".container").innerHTML="container clicked";
+        })
+
+    </script>
+    
+</body>
+</html>

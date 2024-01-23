@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* Universal selector */
+    *
+    {
+        margin:0;
+        padding:0;
+    }
+    /* Element Selector */
+    div{
+        background-color: red;
+        color:yellow;
+    }
+    /* Class Selector */
+    .first
+    {
+        background-color: green;
+        color:yellow;
+    
+    }
+    /* Id Selector */
+
+    #heading
+    {
+        background-color: blue;
+        color:yellow;
+    }
+    /* child Selector */
+
+    span p{
+        background-color: pink;
+        color:yellow;
+    
+    }
+    /* Descendant Selector */
+    
+    span > p{
+        background-color: orange;
+        color:yellow;
+    
+    
+    }
+    /* Psuedo Selector */
+    a:link{
+        color:yellow
+    }
+    a:visited{
+        color:red;
+    }
+    a:active{
+        color:blue;
+
+    }
+    a:hover{
+        color:orange;
+    }
+    p:first-child{
+        background-color: purple;
+        color:yellow;
+    }
+
+
+    
+
+
+</style>
+<body>
+    <div style="width:100px; height:100px;">
+        I am a div-styled with element selcetor
+    </div>
+    <p class="first">
+        Iam a paragraph -styled with class selector
+    </p>
+    <h1 id="heading">
+        Iam h1 -styled with id selector
+    </h1>
+
+    <span>
+        <p>
+            Iam a paragraph inside a span-styled with child selctor
+        </p>
+        <div>
+            Iam a div inside a span
+            <p>
+                Iam a paragraph inside a div inside a span -styled with descendnats selector
+            </p>
+        </div>
+    </span>
+    <article>
+        <a href="https://www.w3schools.com/">W3 Schools</a>
+        <a href="https://www.javatpoint.com/">javatpoint</a>
+    </article>
+    <main>
+        <p>
+            Iam fisrt child
+        </p>
+        <p>
+            Iam second child
+        </p>
+    </main>
+    
+</body>
+</html>
