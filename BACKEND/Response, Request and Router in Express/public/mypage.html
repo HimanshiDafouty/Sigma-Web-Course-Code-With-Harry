@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Put request</title>
+   
+</head>
+<body>
+    <script>
+       async function testPost() {
+    try {
+        const response = await fetch('/', { method: "PUT" });
+        const data = await response.text();
+        console.log(data);
+    } catch (error) {
+        console.error('Error during fetch:', error.message);
+    }
+}
+
+testPost();
+
+    </script>
+    
+</body>
+</html>
